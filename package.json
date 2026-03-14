@@ -4,6 +4,7 @@
     "description": "",
     "main": "./dist/index.js",
     "scripts": {
+        "prepublishOnly": "npm run build",
         "build": "tsc"
     },
     "author": "CyHollis",

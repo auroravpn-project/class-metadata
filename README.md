@@ -1,14 +1,12 @@
 # Class-Metadata
 
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/typescript-5.0%2B-blue)](https://www.typescriptlang.org/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+### Table of Contents
 
-适用于后端架构的元数据框架
+- [Installation](#Installation)
+- [Quickstart](#Quickstart)
+- [Advanced usage](#Advanced-usage)
 
-## 🚀 快速开始
-
-### 安装
+### Installation
 
 ```bash
 # 使用 npm
@@ -21,7 +19,7 @@ yarn add @auroravpn/class-metadata
 pnpm add @auroravpn/class-metadata
 ```
 
-### 示例
+### Quickstart
 
 ```javascript
 import { Metadata } from '@auroravpn/class-metadata'
@@ -41,7 +39,7 @@ metadata.each<Metadata>((val, key) => {
 })
 ```
 
-### 进阶用法
+### Advanced usage
 ```javascript
 import { Metadata } from '@auroravpn/class-metadata'
 
@@ -59,11 +57,3 @@ const metadata = new ControllerMetadata()
 
 metadata.define(new RouteMetadata())
 ```
-
-## 📄 许可证
-
-本项目基于 [MIT](LICENSE) 许可证。
-
-## 🔗 链接
-
-- [GitHub 仓库](https://github.com/CyHollis/class-metadata)

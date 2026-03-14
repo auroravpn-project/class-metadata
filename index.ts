@@ -5,9 +5,12 @@ export class Metadata {
         this[propertyName] = value
     }
 
-    each<T = Metadata>(callback: (value: T, propertyName: string) => void) {
-        for (const propertyName in this) {
-            callback(this[propertyName], propertyName)
+    each<T extends Metadata>(callback: (value: T, propertyName: string) => void) {
+        const properties = Object.keys(this)
+        for (const propertyName of properties) {
+            if (this[propertyName] instanceof Metadata) {
+                callback(this[propertyName] as T, propertyName)
+            }
         }
     }
 
